@@ -22,6 +22,8 @@ def plotMat(times,varCount,conCount):
                     aspect='auto',
                     origin='lower')
     fig.colorbar(im)
+    plt.ylabel('Number Con')
+    plt.xlabel('Number Var')
     plt.show()
     
 def plotHisto(times,varCount,conCount):
@@ -30,8 +32,8 @@ def plotHisto(times,varCount,conCount):
     extent = [min(varCount),max(varCount),min(conCount),max(conCount)]
     # Plot heatmap
     plt.clf()
-    plt.ylabel('y')
-    plt.xlabel('x')
+    plt.ylabel('Number Con')
+    plt.xlabel('Number Var')
     im=plt.imshow(heatmap,extent=extent,origin='low')
     plt.colorbar(im)
     plt.show()
